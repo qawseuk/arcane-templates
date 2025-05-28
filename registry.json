@@ -40,6 +40,18 @@
       "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/templates/monitoring-stack",
       "tags": ["monitoring", "prometheus", "grafana", "alertmanager"],
       "updated_at": "2025-05-28T10:00:00Z"
+    },
+    {
+      "id": "pocket-id",
+      "name": "Pocket ID",
+      "description": "A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.",
+      "version": "1.1.0",
+      "author": "OFKM",
+      "compose_url": "https://raw.githubusercontent.com/ofkm/arcane-templates/main/templates/pocket-id/docker-compose.yml",
+      "env_url": "https://raw.githubusercontent.com/ofkm/arcane-templates/main/templates/pocket-id/.env.example",
+      "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/templates/pocket-id",
+      "tags": ["oidc"],
+      "updated_at": "2025-05-28T10:00:00Z"
     }
   ]
 }
