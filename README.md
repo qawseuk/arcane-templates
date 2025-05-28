@@ -1,8 +1,6 @@
-# 🌟 Arcane Templates Registry
+# Arcane Templates Registry
 
-**Community-maintained Docker Compose templates for the Arcane.**
-
-This repository serves as the community template registry for [Arcane](https://github.com/ofkm/arcane).
+This repository serves as the community template registry [Arcane](https://github.com/ofkm/arcane).
 
 ## 🔧 Using Templates
 
