@@ -1,6 +1,6 @@
 {
   "name": "Arcane Templates",
-  "description": "Docker Compose templates for rapid development and deployment",
+  "description": "Community Docker Compose Templates for Arcane",
   "version": "1.0.0",
   "author": "OFKM",
   "url": "https://github.com/ofkm/arcane-templates",
