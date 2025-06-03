@@ -1,4 +1,8 @@
 {
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/kylemendell/arcane-templates/schema.json",
+  "title": "Arcane Templates Registry Schema",
+  "description": "Schema for Docker Compose template registry configuration",
   "type": "object",
   "properties": {
     "$schema": {
@@ -17,7 +21,7 @@
     "version": {
       "description": "The version of the registry using semantic versioning.",
       "type": "string",
-      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9-]+)?(\\+[a-zA-Z0-9-]+)?$"
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9-]+)?(?:\\+[a-zA-Z0-9-]+)?$"
     },
     "author": {
       "description": "The author or organization maintaining the registry.",
@@ -33,83 +37,87 @@
       "description": "An array of Docker Compose templates available in the registry.",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "description": "A unique identifier for the template. Must be lowercase with hyphens only.",
-            "type": "string",
-            "pattern": "^[a-z0-9-]+$",
-            "minLength": 1
-          },
-          "name": {
-            "description": "The human-readable name of the template.",
-            "type": "string",
-            "minLength": 1
-          },
-          "description": {
-            "description": "A detailed description of what the template provides and its use case.",
-            "type": "string",
-            "minLength": 1
-          },
-          "version": {
-            "description": "The version of the template using semantic versioning.",
-            "type": "string",
-            "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9-]+)?(\\+[a-zA-Z0-9-]+)?$"
-          },
-          "author": {
-            "description": "The author or organization that created the template.",
-            "type": "string",
-            "minLength": 1
-          },
-          "compose_url": {
-            "description": "The direct URL to the docker-compose.yml file for this template.",
-            "type": "string",
-            "format": "uri"
-          },
-          "env_url": {
-            "description": "The direct URL to the environment variables example file (.env.example).",
-            "type": "string",
-            "format": "uri"
-          },
-          "documentation_url": {
-            "description": "The URL to the template's documentation or README.",
-            "type": "string",
-            "format": "uri"
-          },
-          "tags": {
-            "description": "An array of tags for categorizing and searching templates. Tags should be lowercase with hyphens.",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "pattern": "^[a-z0-9-]+$",
-              "minLength": 1
-            },
-            "minItems": 1,
-            "uniqueItems": true
-          },
-          "updated_at": {
-            "description": "The ISO 8601 timestamp of when the template was last updated.",
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "required": [
-          "id",
-          "name",
-          "description",
-          "version",
-          "author",
-          "compose_url",
-          "env_url",
-          "documentation_url",
-          "tags",
-          "updated_at"
-        ],
-        "additionalProperties": false
+        "$ref": "#/$defs/template"
       }
     }
   },
   "required": ["name", "description", "version", "author", "url", "templates"],
   "additionalProperties": false,
-  "$schema": "https://json-schema.org/draft-2020-12/schema"
+  "$defs": {
+    "template": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "A unique identifier for the template. Must be lowercase with hyphens only.",
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "minLength": 1
+        },
+        "name": {
+          "description": "The human-readable name of the template.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "description": "A detailed description of what the template provides and its use case.",
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "description": "The version of the template using semantic versioning.",
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[a-zA-Z0-9-]+)?(?:\\+[a-zA-Z0-9-]+)?$"
+        },
+        "author": {
+          "description": "The author or organization that created the template.",
+          "type": "string",
+          "minLength": 1
+        },
+        "compose_url": {
+          "description": "The direct URL to the docker-compose.yml file for this template.",
+          "type": "string",
+          "format": "uri"
+        },
+        "env_url": {
+          "description": "The direct URL to the environment variables example file (.env.example).",
+          "type": "string",
+          "format": "uri"
+        },
+        "documentation_url": {
+          "description": "The URL to the template's documentation or README.",
+          "type": "string",
+          "format": "uri"
+        },
+        "tags": {
+          "description": "An array of tags for categorizing and searching templates. Tags should be lowercase with hyphens.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "updated_at": {
+          "description": "The ISO 8601 timestamp of when the template was last updated.",
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "version",
+        "author",
+        "compose_url",
+        "env_url",
+        "documentation_url",
+        "tags",
+        "updated_at"
+      ],
+      "additionalProperties": false
+    }
+  }
 }
