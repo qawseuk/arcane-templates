@@ -6,7 +6,7 @@ This repository serves as the community template registry for [Arcane](https://g
 
 Add the following url to the Templates Setting section in Arcane:
 
-`https://raw.githubusercontent.com/ofkm/arcane-templates/main/registry.json`
+`https://templates.arcane.ofkm.dev/registry.json`
 
 ## 🤝 Contributing Templates
 
@@ -40,13 +40,14 @@ Add your template to `registry.json`:
 
 ```json
 {
+  "$schema": "./schema.json",
   "id": "my-template",
   "name": "My Awesome Template",
   "description": "Brief description of what it does",
   "version": "1.0.0",
   "author": "Your Name",
-  "compose_url": "https://raw.githubusercontent.com/ofkm/arcane-templates/main/my-template/docker-compose.yml",
-  "env_url": "https://raw.githubusercontent.com/ofkm/arcane-templates/main/my-template/.env.example",
+  "compose_url": "https://templates.arcane.ofkm.devmy-template/docker-compose.yml",
+  "env_url": "https://templates.arcane.ofkm.devmy-template/.env.example",
   "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/my-template",
   "tags": ["tag1", "tag2", "tag3"],
   "updated_at": "2025-05-28T10:00:00Z"
