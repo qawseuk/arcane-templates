@@ -40,7 +40,6 @@ Add your template to `registry.json`:
 
 ```json
 {
-  "$schema": "./schema.json",
   "id": "my-template",
   "name": "My Awesome Template",
   "description": "Brief description of what it does",
