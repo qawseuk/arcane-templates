@@ -46,8 +46,8 @@ Add your template to `registry.json`:
   "description": "Brief description of what it does",
   "version": "1.0.0",
   "author": "Your Name",
-  "compose_url": "https://templates.arcane.ofkm.devmy-template/docker-compose.yml",
-  "env_url": "https://templates.arcane.ofkm.devmy-template/.env.example",
+  "compose_url": "https://templates.arcane.ofkm.dev/my-template/docker-compose.yml",
+  "env_url": "https://templates.arcane.ofkm.dev/my-template/.env.example",
   "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/my-template",
   "tags": ["tag1", "tag2", "tag3"],
   "updated_at": "2025-05-28T10:00:00Z"
