@@ -29,6 +29,18 @@
       "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/templates/wireguard",
       "tags": ["networking", "vpn"],
       "updated_at": "2025-06-04T10:00:00Z"
+    },
+    {
+      "id": "homepage",
+      "name": "Homepage",
+      "description": "A modern, fully static, fast, secure fully proxied, highly customizable application dashboard with integrations for over 100 services and translations into multiple languages. Easily configured via YAML files or through docker label discovery.",
+      "version": "1.0.0",
+      "author": "Community",
+      "compose_url": "https://templates.arcane.ofkm.dev/templates/homepage/compose.yaml",
+      "env_url": "https://templates.arcane.ofkm.dev/templates/homepage/.env.example",
+      "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/templates/homepage",
+      "tags": ["homepages", "dashboards"],
+      "updated_at": "2025-06-04T10:00:00Z"
     }
   ]
 }
