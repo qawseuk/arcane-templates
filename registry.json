@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "name": "Arcan Community Templates",
+  "name": "Arcane Community Templates",
   "description": "Community Docker Compose Templates for Arcane",
   "version": "1.0.0",
   "author": "OFKM",
