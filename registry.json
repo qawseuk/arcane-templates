@@ -1,6 +1,6 @@
 {
   "$schema": "./schema.json",
-  "name": "Arcane Templates",
+  "name": "Arcan Community Templates",
   "description": "Community Docker Compose Templates for Arcane",
   "version": "1.0.0",
   "author": "OFKM",
@@ -11,12 +11,24 @@
       "name": "Pocket ID",
       "description": "A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.",
       "version": "1.1.0",
-      "author": "OFKM",
+      "author": "Community",
       "compose_url": "https://templates.arcane.ofkm.dev/templates/pocket-id/docker-compose.yml",
       "env_url": "https://templates.arcane.ofkm.dev/templates/pocket-id/.env.example",
       "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/templates/pocket-id",
       "tags": ["oidc"],
       "updated_at": "2025-05-28T10:00:00Z"
+    },
+    {
+      "id": "wireguard",
+      "name": "Wireguard",
+      "description": "WireGuard is a secure, fast, and relatively simple VPN protocol used to establish encrypted connections between devices",
+      "version": "1.0.0",
+      "author": "Community",
+      "compose_url": "https://templates.arcane.ofkm.dev/templates/wireguard/compose.yaml",
+      "env_url": "https://templates.arcane.ofkm.dev/templates/wireguard/.env.example",
+      "documentation_url": "https://github.com/ofkm/arcane-templates/tree/main/templates/wireguard",
+      "tags": ["networking", "vpn"],
+      "updated_at": "2025-06-04T10:00:00Z"
     }
   ]
 }
