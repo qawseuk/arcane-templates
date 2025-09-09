@@ -65,17 +65,3 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: pnpm exec wrangler deploy
-
-      - name: Commit changes
-        if: github.ref == 'refs/heads/main'
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: 'registry.json'
-          message: 'chore: auto-build registry.json [skip ci]'
-          default_author: github_actions
-          pull: '--rebase --autostash'
-          fetch: false
-          push: true
-          pathspec_error_handling: ignore
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
